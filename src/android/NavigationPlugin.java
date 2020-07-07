@@ -37,13 +37,20 @@ public class NavigationPlugin extends CordovaPlugin  {
            cordova.getActivity().runOnUiThread(new Runnable(){
             @Override
             public void run(){
-              Uri gmmIntentUri = Uri.parse("google.navigation:q="+args.getString(0));
-              Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-              mapIntent.setPackage("com.google.android.apps.maps");
-              cordova.getActivity().startActivity(mapIntent);
+                try {
+                    Uri gmmIntentUri = Uri.parse("google.navigation:q="+args.getString(0));
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    cordova.getActivity().startActivity(mapIntent);
+                    Log.d(TAG,"Navigation displayed Successfully with Location"+args.getString(0));
+                } catch (JSONException e) {
+                    //TODO: handle exception
+                    Log.d(TAG,"Navigation error"+e);
+                }
+             
             }
            });
-              Log.d(TAG,"Navigation displayed Successfullywith Location"+args.getString(0));
+             
             }
             return true;
         }
