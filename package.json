@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/joetjacobs/ionic-cordova-googlemaps-navigation.git"
   },
-  "version": "1.2.0",
+  "version": "1.2.1",
   "bugs": {
     "url": "https://github.com/joetjacobs/ionic-cordova-googlemaps-navigation/issues"
   },

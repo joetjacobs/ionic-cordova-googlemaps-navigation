@@ -30,19 +30,20 @@ public class NavigationPlugin extends CordovaPlugin  {
     }
 
     @Override
+
     public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext)
     throws JSONException {
         if (action.equals("navigate")) {
            cordova.getActivity().runOnUiThread(new Runnable(){
             @Override
             public void run(){
-              Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia");
+              Uri gmmIntentUri = Uri.parse("google.navigation:q="+args.getString(0));
               Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
               mapIntent.setPackage("com.google.android.apps.maps");
               cordova.getActivity().startActivity(mapIntent);
             }
            });
-              Log.d(TAG,"Naviagtion displayed Successfully");
+              Log.d(TAG,"Navigation displayed Successfullywith Location"+args.getString(0));
             }
             return true;
         }

@@ -2,8 +2,8 @@ var execute = require("cordova/exec");
 
 var navigation = {
 
-  navigate:function(success,failure){
-      return execute(success,failure,'NavigationPlugin', 'navigate', []);
+  navigate:function(location, success, failure){
+      return execute(success, failure, 'NavigationPlugin', 'navigate', [location]);
     }
 };
 module.exports = navigation;
