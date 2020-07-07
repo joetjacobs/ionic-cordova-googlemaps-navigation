@@ -44,12 +44,11 @@ public class NavigationPlugin extends CordovaPlugin  {
            });
               Log.d(TAG,"Registered Successfully");
             }
+            return true;
         }
          
-        return true;
-    }
-
-
+        
+    
 
     @Override
     public void onResume(boolean multitasking) {

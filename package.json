@@ -1,8 +1,5 @@
 {
-  "author": {
-    "name": "Joe jacob",
-    "url": "http://ionic.com"
-  },
+  "author": "Joe jacob (http://ionic.com)",
   "deprecated": false,
   "description": "Ionic/Cordova Plugin for the google maps navigation.",
   "homepage": "https://github.com/joetjacobs/ionic-cordova-googlemaps-navigation",
@@ -17,7 +14,13 @@
   "name": "ionic-cordova-googlemaps-navigation",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joetjacobs/ionic-cordova-googlemaps-navigation"
+    "url": "git+https://github.com/joetjacobs/ionic-cordova-googlemaps-navigation.git"
   },
-  "version": "1.0.0"
+  "version": "1.2.0",
+  "bugs": {
+    "url": "https://github.com/joetjacobs/ionic-cordova-googlemaps-navigation/issues"
+  },
+  "scripts": {
+    "test": "serve"
+  }
 }
