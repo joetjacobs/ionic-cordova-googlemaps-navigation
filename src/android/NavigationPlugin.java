@@ -39,10 +39,10 @@ public class NavigationPlugin extends CordovaPlugin  {
               Uri gmmIntentUri = Uri.parse("google.navigation:q=Taronga+Zoo,+Sydney+Australia");
               Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
               mapIntent.setPackage("com.google.android.apps.maps");
-              startActivity(mapIntent);
+              cordova.getActivity().startActivity(mapIntent);
             }
            });
-              Log.d(TAG,"Registered Successfully");
+              Log.d(TAG,"Naviagtion displayed Successfully");
             }
             return true;
         }
